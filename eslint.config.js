@@ -14,4 +14,8 @@ export default antfu({
     'no-undef': 'off',
     'jsdoc/require-returns-description': 'off',
   },
+  ignores: [
+    'stylelint',
+    'data',
+  ],
 });
