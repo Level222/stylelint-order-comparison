@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A comparison of packages that provide properties order for stylelint-order">
+  <title>Stylelint Order Comparison</title>
+
+  <link rel="preconnect" href="https://esm.sh">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://api.npmjs.org">
+
+  <link rel="stylesheet" href="https://esm.sh/sanitize.css@^13.0.0/sanitize.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap">
+  <link rel="stylesheet" href="https://esm.sh/hack-font@^3.3.0/build/web/hack-subset.css">
+  <link rel="stylesheet" href="https://esm.sh/ag-grid-community@^32.2.0/styles/ag-grid.css">
+  <link rel="stylesheet" href="https://esm.sh/ag-grid-community@^32.2.0/styles/ag-theme-quartz.css">
+  <link rel="stylesheet" href="./style.css">
+
+  <script type="importmap">
+    {
+      "imports": {
+        "ag-grid-community": "https://esm.sh/ag-grid-community@^32.2.0"
+      }
+    }
+  </script>
+
+  <script type="module" src="./index.js"></script>
+</head>
+
+<body class="inter-normal">
+  <header>
+    <h1>Stylelint Order Comparison</h1>
+    <div><a href="https://github.com/Level222/stylelint-order-comparison">GitHub</a></div>
+  </header>
+
+  <main>
+    <div id="grid" class="ag-theme-quartz inter-normal">
+      <div class="fallback-wrapper ag-root-wrapper ag-layout-normal">
+        <div class="fallback-content">Loading...</div>
+      </div>
+    </div>
+    <div id="orders"></div>
+  </main>
+</body>
+
+</html>

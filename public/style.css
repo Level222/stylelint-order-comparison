@@ -1,0 +1,149 @@
+:root {
+  --text-color: #0c375a;
+  --sub-text-color: #15609d;
+  --header-color: #186ebf;
+  --link-color: #1b76cc;
+  --header-text-color: #fff;
+  --group-color: #f1f7fd;
+  --content-margin: 15px;
+  --header-height: 55px;
+}
+
+.inter-normal {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-optical-sizing: auto;
+}
+
+pre,
+code {
+  font-family: Hack, monospace;
+}
+
+a {
+  color: var(--link-color);
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+header,
+main {
+  padding: var(--content-margin);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--header-color);
+
+  &,
+  * {
+    color: var(--header-text-color);
+  }
+}
+
+h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: var(--header-height);
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+#grid {
+  height: calc(100svh - var(--header-height) - var(--content-margin) * 2 - 100px);
+
+  .fallback-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .fallback-content {
+    font-size: 18px;
+    color: var(--sub-text-color);
+    opacity: 0;
+    animation: 1.5s 0.5s loading reverse infinite;
+  }
+}
+
+#orders {
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  grid-auto-columns: 270px;
+  grid-auto-flow: column;
+  gap: 10px 14px;
+  overflow-x: auto;
+
+  ul,
+  ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .order-detail {
+    display: contents;
+  }
+
+  .package-name {
+    align-self: center;
+    font-size: 17px;
+  }
+
+  .group-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 12px;
+    background-color: var(--group-color);
+  }
+
+  .group-option-list {
+    font-size: 14px;
+    color: var(--sub-text-color);
+  }
+
+  .group-properties {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 15px;
+  }
+}
