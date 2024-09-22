@@ -2,7 +2,7 @@
 
 A comparison of packages that provide properties order for [stylelint-order](https://github.com/hudochenkov/stylelint-order)
 
-Visit <https://level222.github.io/stylelint-order-comparison/> to see the comparison.
+Visit <https://level222.github.io/stylelint-order-comparison/public/> to see the comparison.
 
 ## Features
 
