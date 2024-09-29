@@ -1,12 +1,33 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:js-app"
+    "config:js-app",
+    "schedule:monthly"
   ],
   "packageRules": [
     {
       "groupName": "Stylelint Order Properties",
-      "matchPackageNames": "{@*/,}stylelint-{config-*,order-*,*-order,*-groups}"
+      "matchPackageNames": ["{@*/,}stylelint-{config-*,order-*,*-order,*-groups}"],
+      "extends": [
+        "schedule:daily"
+      ]
+    },
+    {
+      "groupName": "Stylelint Plugin and Tools",
+      "matchPackageNames": [
+        "stylelint-order",
+        "stylelint-define-config"
+      ],
+      "extends": [
+        "schedule:weekly"
+      ]
+    },
+    {
+      "groupName": "Influential Packages",
+      "matchPackageNames": ["known-css-properties"],
+      "extends": [
+        "schedule:daily"
+      ]
     }
   ]
 }
