@@ -8,6 +8,6 @@ if (!gridElement || !ordersElement) {
   throw new TypeError('Failed to find element.');
 }
 
-const packageDataWithDynamicStatsList = await getPackageDataWithDynamicStatsList();
-
-setUpGrid(gridElement, ordersElement, packageDataWithDynamicStatsList);
+getPackageDataWithDynamicStatsList().then((packageDataWithDynamicStatsList) => {
+  setUpGrid(gridElement, ordersElement, packageDataWithDynamicStatsList);
+});
