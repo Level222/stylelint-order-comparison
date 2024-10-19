@@ -253,7 +253,7 @@ const setUpGrid = (gridElement, ordersElement, packageDataWithDynamicStatsList) 
         ],
       },
     ],
-    selection: {
+    rowSelection: {
       mode: 'multiRow',
     },
     selectionColumnDef: {
