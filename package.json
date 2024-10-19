@@ -14,7 +14,7 @@
     "@qxy/stylelint-config-order": "1.8.1",
     "@web-io/stylelint-config-rational-order": "0.1.4",
     "@zilahir/stylelint-config-rational-order": "0.1.5",
-    "known-css-properties": "0.34.0",
+    "known-css-properties": "0.35.0",
     "stylelint-config-clean-order": "6.1.0",
     "stylelint-config-concentric-order": "5.2.0",
     "stylelint-config-hudochenkov": "10.0.0",
