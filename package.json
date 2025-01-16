@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "3.8.0",
-    "@types/node": "22.8.6",
+    "@types/node": "22.10.7",
     "ag-grid-community": "32.2.2",
     "eslint": "9.13.0",
     "husky": "9.1.6",
