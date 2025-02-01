@@ -2,8 +2,8 @@ import stylelintConfigRationalOrder1024PixConfigCreator from '@1024pix/stylelint
 import stylelintConfigRationalOrderWebIoConfigCreator from '@web-io/stylelint-config-rational-order/config/configCreator.js';
 import stylelintConfigRationalOrderZilahirConfigCreator from '@zilahir/stylelint-config-rational-order/config/configCreator.js';
 import stylelintConfigRationalDeclarationConfigCreator from 'stylelint-config-rational-declaration/config/configCreator.js';
-import stylelintConfigRationalOrderConfigCreator from 'stylelint-config-rational-order/config/configCreator.js';
 import stylelintCOnfigRationalOrderFixConfigCreator from 'stylelint-config-rational-order-fix/config/configCreator.js';
+import stylelintConfigRationalOrderConfigCreator from 'stylelint-config-rational-order/config/configCreator.js';
 import stylelintOrderRules from 'stylelint-order/rules/index.js';
 import stylelintSemanticGroups from 'stylelint-semantic-groups';
 import importPackageInfoFromConfig from './import-package-info-from-config.js';
