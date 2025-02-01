@@ -1,4 +1,4 @@
-import { createGrid } from 'ag-grid-community';
+import { createGrid, themeQuartz } from 'ag-grid-community';
 
 /**
  * @typedef {{
@@ -126,6 +126,7 @@ const setUpGrid = (gridElement, ordersElement, packageDataWithDynamicStatsList) 
   gridElement.replaceChildren();
 
   createGrid(gridElement, {
+    theme: themeQuartz,
     rowData,
     columnTypes: {
       formattedNumber: {
