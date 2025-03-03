@@ -38,7 +38,7 @@
     "eslint": "9.21.0",
     "husky": "9.1.7",
     "lint-staged": "15.4.3",
-    "stylelint-define-config": "16.14.1",
+    "stylelint-define-config": "16.15.0",
     "type-fest": "4.36.0",
     "typescript": "5.8.2"
   },
