@@ -16,7 +16,7 @@
     "@zilahir/stylelint-config-rational-order": "0.1.5",
     "known-css-properties": "0.35.0",
     "stylelint-config-clean-order": "7.0.0",
-    "stylelint-config-concentric-order": "5.2.0",
+    "stylelint-config-concentric-order": "5.2.1",
     "stylelint-config-hudochenkov": "11.0.0",
     "stylelint-config-idiomatic-order": "10.0.0",
     "stylelint-config-neon-order": "1.0.0",
