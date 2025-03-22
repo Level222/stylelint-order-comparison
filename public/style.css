@@ -1,12 +1,12 @@
 :root {
   --text-color: #0c375a;
   --sub-text-color: #15609d;
+  --informational-text-color: #617888;
   --header-color: #186ebf;
   --link-color: #1b76cc;
   --header-text-color: #fff;
   --group-color: #f1f7fd;
   --content-margin: 15px;
-  --header-height: 55px;
 }
 
 .inter-normal {
@@ -25,6 +25,10 @@ a {
   color: var(--link-color);
 }
 
+summary {
+  cursor: pointer;
+}
+
 body {
   margin: 0;
   font-size: 16px;
@@ -37,14 +41,9 @@ main {
 }
 
 header {
-  position: fixed;
-  top: 0;
-  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  height: var(--header-height);
   background-color: var(--header-color);
 
   &,
@@ -81,15 +80,18 @@ main {
 
 
 #grid {
-  height: calc(100svh - var(--header-height) - var(--content-margin) * 2 - 100px);
+  height: calc(100svh - var(--content-margin) * 2 - 120px);
 
-  .fallback-wrapper {
+  .placeholder-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
+    border: solid 1px #00000026;
+    border-radius: 8px;
   }
 
-  .fallback-content {
+  .placeholder-content {
     font-size: 18px;
     color: var(--sub-text-color);
     opacity: 0;
@@ -98,12 +100,19 @@ main {
 }
 
 #orders {
-  display: grid;
-  grid-template-rows: max-content 1fr;
-  grid-auto-columns: 270px;
-  grid-auto-flow: column;
-  gap: 10px 14px;
-  overflow-x: auto;
+  .orders-info {
+    color: var(--informational-text-color);
+    font-size: 15px;
+  }
+
+  .order-detail-list {
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    grid-auto-columns: 270px;
+    grid-auto-flow: column;
+    gap: 10px 14px;
+    overflow-x: auto;
+  }
 
   ul,
   ol {
@@ -128,16 +137,15 @@ main {
   }
 
   .group {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding: 12px;
     background-color: var(--group-color);
+    border-radius: 8px;
+    padding: 12px;
   }
 
   .group-option-list {
     font-size: 14px;
     color: var(--sub-text-color);
+    margin-top: 6px;
   }
 
   .group-properties {
@@ -145,5 +153,6 @@ main {
     flex-direction: column;
     gap: 2px;
     font-size: 15px;
+    margin-top: 6px;
   }
 }
