@@ -1,3 +1,4 @@
+// @ts-ignore
 import stylelintOrderRules from 'stylelint-order/rules/index.js';
 import strictlyNormalizeRuleSettings from './strictly-normalize-rule-settings.js';
 
@@ -19,7 +20,7 @@ const extractPackageName = (packageFilePath) => {
  * @param {string} packageFilePath
  * @returns {Promise<import('../../utils/types.js').PackageInfo>}
  */
-const importPackageInfoFromConfig = async (packageFilePath) => {
+export const importPackageInfoFromConfig = async (packageFilePath) => {
   const name = extractPackageName(packageFilePath);
 
   /**
@@ -52,4 +53,20 @@ const importPackageInfoFromConfig = async (packageFilePath) => {
   };
 };
 
-export default importPackageInfoFromConfig;
+/**
+ * @param {string} packageName
+ * @returns {Promise<import('../../utils/types.js').PackageInfo>}
+ */
+export const importPackageInfoLikeRationalOrder = async (packageName) => {
+  /**
+   * @type {() => import('../../utils/types.js').PropertiesOrderGroup[]}
+   */
+  const configCreator = (await import(`${packageName}/config/configCreator.js`)).default;
+
+  return {
+    name: packageName,
+    type: 'config',
+    primaryOption: configCreator(),
+    secondaryOptions: undefined,
+  };
+};
