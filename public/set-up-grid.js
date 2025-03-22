@@ -144,6 +144,7 @@ const setUpGrid = (gridElement, ordersElement, packageDataWithDynamicStatsList) 
       },
     },
     defaultColDef: {
+      sortingOrder: ['asc', 'desc'],
       filter: true,
       floatingFilter: true,
     },
