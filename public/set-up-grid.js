@@ -61,14 +61,16 @@ const createOrderDetail = (rowDataItem) => (
     el('ol.group-list', {}, rowDataItem.groups
       .map(({ propertyDetails, groupName, ...restOptions }, groupIndex) => (
         el('li.group', {}, [
-          el('div.group-name', {}, [groupName || `Group ${groupIndex + 1}`]),
-          el('ul.group-option-list', {}, Object.entries(restOptions)
-            .map(([optionName, optionValue]) => (
-              el('li.group-option', {}, [el('code', {}, [`${optionName}: ${optionValue}`])])
+          el('details', { open: true }, [
+            el('summary.group-name', {}, [groupName || `Group ${groupIndex + 1}`]),
+            el('ul.group-option-list', {}, Object.entries(restOptions)
+              .map(([optionName, optionValue]) => (
+                el('li.group-option', {}, [el('code', {}, [`${optionName}: ${JSON.stringify(optionValue)}`])])
+              ))),
+            el('ol.group-properties', {}, propertyDetails.map(({ propertyName }) => (
+              el('li.property', {}, [el('code', {}, [propertyName])])
             ))),
-          el('ol.group-properties', {}, propertyDetails.map(({ propertyName }) => (
-            el('li.property', {}, [el('code', {}, [propertyName])])
-          ))),
+          ]),
         ])
       ))),
   ])
@@ -119,8 +121,11 @@ const setUpGrid = (gridElement, ordersElement, packageDataWithDynamicStatsList) 
       }
     });
 
-    ordersElement.replaceChildren(...selectedRowNodes.map(createOrderDetail));
-    ordersElement.style.display = selectedRowNodes.length === 0 ? 'none' : '';
+    ordersElement.replaceChildren(
+      selectedRowNodes.length
+        ? el('div.order-detail-list', {}, selectedRowNodes.map(createOrderDetail))
+        : el('div.orders-info', {}, ['Select the checkboxes to view the detailed order']),
+    );
   };
 
   gridElement.replaceChildren();
