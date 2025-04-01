@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { all as allKnownProperties } from 'known-css-properties';
+// @ts-ignore
 import vendor from 'stylelint-order/utils/vendor.js';
 import { pick } from '../../utils/helpers.js';
 import { defaultPropertiesOrderSecondaryOptions } from './default-options.js';
