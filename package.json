@@ -37,7 +37,7 @@
     "ag-grid-community": "33.2.4",
     "eslint": "9.26.0",
     "husky": "9.1.7",
-    "lint-staged": "15.5.2",
+    "lint-staged": "16.4.0",
     "stylelint-define-config": "16.19.0",
     "type-fest": "4.41.0",
     "typescript": "5.8.3"
