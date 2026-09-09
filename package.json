@@ -32,15 +32,15 @@
     "stylelint-semantic-groups": "1.2.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "4.13.0",
-    "@types/node": "22.15.17",
-    "ag-grid-community": "33.2.4",
-    "eslint": "9.26.0",
+    "@antfu/eslint-config": "4.19.0",
+    "@types/node": "22.20.2",
+    "ag-grid-community": "33.3.2",
+    "eslint": "9.39.5",
     "husky": "9.1.7",
     "lint-staged": "15.5.2",
     "stylelint-define-config": "16.19.0",
     "type-fest": "4.41.0",
-    "typescript": "5.8.3"
+    "typescript": "5.9.3"
   },
   "lint-staged": {
     "*": "npm run lint:fix --"
